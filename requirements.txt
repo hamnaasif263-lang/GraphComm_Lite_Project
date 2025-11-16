@@ -1,0 +1,9 @@
+torch
+numpy
+pandas
+networkx
+scikit-learn
+scanpy
+requests
+biopython
+tqdm
