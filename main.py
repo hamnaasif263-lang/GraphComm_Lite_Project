@@ -128,26 +128,34 @@ except Exception as e:
 # VISUALIZATION SECTION
 # --------------------------------------------
 
-# Plot IGF pathway activity
+import os
+os.makedirs("plots", exist_ok=True)
+
+# Plot IGF pathway activity (saved to plots/)
 try:
     df_expr = pd.read_csv(sc_path, index_col=0)
     igf_genes = open("data/igf_pathway_genes.txt").read().splitlines()
     igf_values = df_expr[[g for g in igf_genes if g in df_expr.columns]].mean(axis=1)
-    plot_igf_activity(igf_values)
-except Exception:
-    print("Could not generate IGF activity plot.")
+    plot_igf_activity(igf_values, save_path="plots/igf_activity.png")
+    print("Saved IGF activity plot to plots/igf_activity.png")
+except Exception as e:
+    print("Could not generate IGF activity plot:", e)
 
 # Plot heatmap of model scores
 try:
-    plot_dormancy_heatmap(embeddings[:, 0] if embeddings.ndim > 1 else embeddings)
-except Exception:
-    print("Could not generate dormancy heatmap.")
+    scores = embeddings[:, 0] if embeddings.ndim > 1 else embeddings
+    plot_dormancy_heatmap(scores, save_path="plots/dormancy_heatmap.png")
+    print("Saved dormancy heatmap to plots/dormancy_heatmap.png")
+except Exception as e:
+    print("Could not generate dormancy heatmap:", e)
 
 # Plot network graph
 try:
-    plot_communication_graph(G_knn, embeddings[:, 0] if embeddings.ndim > 1 else embeddings)
-except Exception:
-    print("Could not generate communication graph.")
+    scores = embeddings[:, 0] if embeddings.ndim > 1 else embeddings
+    plot_communication_graph(G_knn, scores, save_path="plots/communication_graph.png")
+    print("Saved communication graph to plots/communication_graph.png")
+except Exception as e:
+    print("Could not generate communication graph:", e)
 
 # ============================================================
 # 6️⃣  Retrieve FDA-approved drugs for IGF/PI3K/AKT targets

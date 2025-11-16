@@ -14,7 +14,7 @@ import networkx as nx
 
 
 # ----------------------------------------------------------
-def plot_igf_activity(igf_values):
+def plot_igf_activity(igf_values, save_path: str = None):
     """
     Scatter plot of IGF pathway activity.
     """
@@ -25,11 +25,15 @@ def plot_igf_activity(igf_values):
     plt.ylabel("IGF Activity Score")
     plt.grid(alpha=0.3)
     plt.tight_layout()
-    plt.show()
+    if save_path:
+        plt.savefig(save_path, dpi=150)
+        plt.close()
+    else:
+        plt.show()
 
 
 # ----------------------------------------------------------
-def plot_dormancy_heatmap(scores):
+def plot_dormancy_heatmap(scores, save_path: str = None):
     """
     Heatmap of GraphComm-Lite risk (dormancy) scores.
     """
@@ -39,11 +43,15 @@ def plot_dormancy_heatmap(scores):
     plt.xlabel("Cell Index")
     plt.yticks([], [])
     plt.tight_layout()
-    plt.show()
+    if save_path:
+        plt.savefig(save_path, dpi=150)
+        plt.close()
+    else:
+        plt.show()
 
 
 # ----------------------------------------------------------
-def plot_communication_graph(G, scores):
+def plot_communication_graph(G, scores, save_path: str = None):
     """
     Visualize the communication graph with node colors based on risk scores.
     """
@@ -66,4 +74,8 @@ def plot_communication_graph(G, scores):
 
     plt.title("Cell-to-Cell IGF Communication Network")
     plt.tight_layout()
-    plt.show()
+    if save_path:
+        plt.savefig(save_path, dpi=150)
+        plt.close()
+    else:
+        plt.show()
