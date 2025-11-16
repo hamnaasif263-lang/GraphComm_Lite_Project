@@ -15,6 +15,7 @@ from train_predict import train_graph_model, drug_response_prediction
 from pathway_analysis import build_igf_graph
 from drug_integration import query_fda_approved_drugs
 from relapse_analysis import get_relapse_labels, evaluate_classifier, top_upregulated_genes
+from visualize import plot_igf_activity, plot_dormancy_heatmap, plot_communication_graph
 
 # ============================================================
 # 1️⃣  Load and preprocess single-cell RNA-seq data
@@ -122,6 +123,31 @@ try:
             print(f"\nNo drugs found for {gene} via API/local DB.")
 except Exception as e:
     print(f"\nCould not identify drug targets: {e}")
+
+# --------------------------------------------
+# VISUALIZATION SECTION
+# --------------------------------------------
+
+# Plot IGF pathway activity
+try:
+    df_expr = pd.read_csv(sc_path, index_col=0)
+    igf_genes = open("data/igf_pathway_genes.txt").read().splitlines()
+    igf_values = df_expr[[g for g in igf_genes if g in df_expr.columns]].mean(axis=1)
+    plot_igf_activity(igf_values)
+except Exception:
+    print("Could not generate IGF activity plot.")
+
+# Plot heatmap of model scores
+try:
+    plot_dormancy_heatmap(embeddings[:, 0] if embeddings.ndim > 1 else embeddings)
+except Exception:
+    print("Could not generate dormancy heatmap.")
+
+# Plot network graph
+try:
+    plot_communication_graph(G_knn, embeddings[:, 0] if embeddings.ndim > 1 else embeddings)
+except Exception:
+    print("Could not generate communication graph.")
 
 # ============================================================
 # 6️⃣  Retrieve FDA-approved drugs for IGF/PI3K/AKT targets

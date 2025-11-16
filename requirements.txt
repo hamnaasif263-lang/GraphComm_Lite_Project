@@ -7,3 +7,5 @@ scanpy
 requests
 biopython
 tqdm
+matplotlib
+seaborn
