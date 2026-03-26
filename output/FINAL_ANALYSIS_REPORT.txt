@@ -1,0 +1,119 @@
+================================================================================
+GRAPHCOMM-LITE: INTEGRATED CANCER DORMANCY & RELAPSE RISK ANALYSIS
+================================================================================
+
+PROJECT OVERVIEW
+--------------------------------------------------------------------------------
+This analysis integrates single-cell transcriptomics with clinical outcome prediction
+to identify dormant tumor cell populations and stratify patients by relapse risk.
+
+ANALYSIS PIPELINE
+--------------------------------------------------------------------------------
+Stage 1: Single-cell preprocessing and dormancy signature extraction
+Stage 2: Patient-level feature aggregation and risk modeling
+Stage 3: Window of risk estimation (6mo, 12mo, 24mo)
+Stage 4: Professional visualization for publication
+
+COHORT SUMMARY
+--------------------------------------------------------------------------------
+Total Patients Analyzed: 150
+Cancer Types: 3 (Breast, Lung, Prostate)
+Patients per Cancer Type: 50
+
+RISK STRATIFICATION RESULTS
+--------------------------------------------------------------------------------
+
+
+Breast Cancer
+----------------------------------------
+
+  6-Month Window:
+    • Mean Relapse Risk:     8.3%
+    • Median Risk:          8.3%
+    • Standard Deviation:   1.6%
+    • High-Risk Patients:   0/50
+
+  12-Month Window:
+    • Mean Relapse Risk:     14.4%
+    • Median Risk:          14.4%
+    • Standard Deviation:   2.8%
+    • High-Risk Patients:   0/50
+
+  24-Month Window:
+    • Mean Relapse Risk:     22.4%
+    • Median Risk:          22.3%
+    • Standard Deviation:   4.3%
+    • High-Risk Patients:   0/50
+
+Lung Cancer
+----------------------------------------
+
+  6-Month Window:
+    • Mean Relapse Risk:     9.8%
+    • Median Risk:          9.9%
+    • Standard Deviation:   1.8%
+    • High-Risk Patients:   0/50
+
+  12-Month Window:
+    • Mean Relapse Risk:     17.1%
+    • Median Risk:          17.3%
+    • Standard Deviation:   3.1%
+    • High-Risk Patients:   0/50
+
+  24-Month Window:
+    • Mean Relapse Risk:     26.6%
+    • Median Risk:          26.7%
+    • Standard Deviation:   4.8%
+    • High-Risk Patients:   0/50
+
+Prostate Cancer
+----------------------------------------
+
+  6-Month Window:
+    • Mean Relapse Risk:     7.3%
+    • Median Risk:          7.3%
+    • Standard Deviation:   2.5%
+    • High-Risk Patients:   0/50
+
+  12-Month Window:
+    • Mean Relapse Risk:     12.6%
+    • Median Risk:          12.6%
+    • Standard Deviation:   4.3%
+    • High-Risk Patients:   0/50
+
+  24-Month Window:
+    • Mean Relapse Risk:     19.6%
+    • Median Risk:          19.6%
+    • Standard Deviation:   6.6%
+    • High-Risk Patients:   0/50
+
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+Risk Ranking at 24-Month Horizon (Highest to Lowest):
+1. Lung Cancer: 26.6%
+2. Breast Cancer: 22.4%
+3. Prostate Cancer: 19.6%
+
+
+Clinical Implications:
+----------------------------------------
+• Lung cancer shows HIGHEST relapse risk (26.6% at 24mo),
+  suggesting need for aggressive therapeutic intervention.
+
+• Prostate cancer shows LOWEST relapse risk (19.6% at 24mo),
+  consistent with slower tumor progression patterns.
+
+• Breast cancer shows INTERMEDIATE risk (22.4% at 24mo),
+  requiring personalized risk stratification for treatment decisions.
+
+
+================================================================================
+OUTPUT FILES
+================================================================================
+
+Data Files (CSV format):
+----------------------------------------
+  • output/MASTER_PATIENT_REGISTRY.csv

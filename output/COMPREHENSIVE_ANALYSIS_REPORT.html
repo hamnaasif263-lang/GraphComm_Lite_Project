@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Cancer Analysis Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+        header {
+            text-align: center;
+            border-bottom: 4px solid #3498DB;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        h1 { font-size: 2.5em; color: #2C3E50; }
+        .subtitle { color: #7F8C8D; font-size: 1.1em; }
+        .timestamp { color: #95A5A6; font-style: italic; margin-top: 10px; }
+        .section { margin-bottom: 50px; }
+        .section-title { 
+            font-size: 1.8em; 
+            color: #2C3E50;
+            border-left: 5px solid #3498DB;
+            padding-left: 15px;
+            margin-bottom: 25px;
+            margin-top: 35px;
+        }
+        .cancer-analysis {
+            background: #F8F9FA;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 5px solid #E74C3C;
+        }
+        .cancer-title {
+            font-size: 1.5em;
+            color: #E74C3C;
+            margin-bottom: 15px;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .metric-card {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border-top: 3px solid #3498DB;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .metric-label { font-size: 0.9em; color: #7F8C8D; text-transform: uppercase; }
+        .metric-value { font-size: 1.5em; font-weight: bold; color: #2C3E50; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th {
+            background-color: #3498DB;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ECF0F1;
+        }
+        tr:hover { background-color: #F8F9FA; }
+        .figure-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .figure-item {
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .figure-image { width: 100%; height: auto; display: block; }
+        .figure-caption {
+            padding: 12px;
+            background: #F8F9FA;
+            font-weight: 600;
+            color: #2C3E50;
+            font-size: 0.9em;
+        }
+        .key-findings {
+            background: #E8F8F5;
+            border-left: 5px solid #27AE60;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .key-findings h4 { color: #27AE60; margin-bottom: 10px; }
+        footer {
+            border-top: 2px solid #ECF0F1;
+            padding-top: 25px;
+            text-align: center;
+            color: #95A5A6;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+        .comparative-section {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .stat { background: #667eea; color: white; padding: 15px; border-radius: 6px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>COMPREHENSIVE MULTI-CANCER ANALYSIS REPORT</h1>
+            <p class="subtitle">IGF Pathway Analysis - Clinical Risk Assessment - FDA Drug Recommendations</p>
+            <p class="timestamp">Generated: 2026-03-17 12:17:02</p>
+        </header>
+        
+        <section class="section">
+            <h2 class="section-title">EXECUTIVE SUMMARY</h2>
+            <p>Integrated analysis of three major cancer types examining:</p>
+            <ul>
+                <li>IGF Pathway Activation: Cancer-specific signaling patterns</li>
+                <li>Dormancy Signatures: Cell population composition analysis</li>
+                <li>Clinical Risk Assessment: Prognostic modeling</li>
+                <li>Precision Drug Recommendations: FDA-approved treatments matched to pathway activation</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">INDIVIDUAL CANCER ANALYSES</h2>
+
+            <div class="cancer-analysis">
+                <div class="cancer-title">[Breast Cancer]</div>
+
+                <div class="metrics-grid">
+
+                    <div class="metric-card">
+                        <div class="metric-label">IGF Ligand</div>
+                        <div class="metric-value">0.154</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">IGF Receptor</div>
+                        <div class="metric-value">0.167</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">PI3K-AKT</div>
+                        <div class="metric-value">0.264</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">mTOR</div>
+                        <div class="metric-value">0.315</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">MAPK</div>
+                        <div class="metric-value">0.271</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">MYC</div>
+                        <div class="metric-value">0.288</div>
+                    </div>
+
+                </div>
+
+                <div class="key-findings">
+                    <h4>Dormancy Signature Results</h4>
+                    <ul>
+                        <li>Dormant Cells: 0.1%</li>
+                        <li>Transitional Cells: 11.7%</li>
+                        <li>Proliferative Cells: 0.1%</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h4>Top 5 FDA-Approved Drug Recommendations</h4>
+                    <table>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Mechanism</th>
+                            <th>Score</th>
+                        </tr>
+
+                        <tr>
+                            <td>Ribociclib (Kisqali)</td>
+                            <td>CDK4/6 inhibitor</td>
+                            <td>8.90</td>
+                        </tr>
+
+                        <tr>
+                            <td>Palbociclib (Ibrance)</td>
+                            <td>CDK4/6 inhibitor (affects cell cycle)</td>
+                            <td>8.90</td>
+                        </tr>
+
+                        <tr>
+                            <td>Abemaciclib (Verzenio)</td>
+                            <td>CDK4/6 inhibitor</td>
+                            <td>8.90</td>
+                        </tr>
+
+                        <tr>
+                            <td>Linsitinib (OSI-906)</td>
+                            <td>Selective IGF1R tyrosine kinase inhibitor</td>
+                            <td>8.69</td>
+                        </tr>
+
+                        <tr>
+                            <td>BMS-536924</td>
+                            <td>IGF1R tyrosine kinase inhibitor</td>
+                            <td>8.69</td>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="figure-gallery">
+
+                    <div class="figure-item">
+                        <img src="breast_cancer/figures/breast_cancer_dormancy_distribution.png" alt="breast cancer dormancy distribution" class="figure-image">
+                        <div class="figure-caption">breast cancer dormancy distribution</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="breast_cancer/figures/breast_cancer_igf_expression_heatmap.png" alt="breast cancer igf expression heatmap" class="figure-image">
+                        <div class="figure-caption">breast cancer igf expression heatmap</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="breast_cancer/figures/breast_cancer_pathway_activation_distribution.png" alt="breast cancer pathway activation distribution" class="figure-image">
+                        <div class="figure-caption">breast cancer pathway activation distribution</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="breast_cancer/figures/breast_cancer_top_drugs.png" alt="breast cancer top drugs" class="figure-image">
+                        <div class="figure-caption">breast cancer top drugs</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="breast_cancer/figures/breast_cancer_window_of_risk.png" alt="breast cancer window of risk" class="figure-image">
+                        <div class="figure-caption">breast cancer window of risk</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cancer-analysis">
+                <div class="cancer-title">[Lung Cancer]</div>
+
+                <div class="metrics-grid">
+
+                    <div class="metric-card">
+                        <div class="metric-label">IGF Ligand</div>
+                        <div class="metric-value">0.183</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">IGF Receptor</div>
+                        <div class="metric-value">0.148</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">PI3K-AKT</div>
+                        <div class="metric-value">0.310</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">mTOR</div>
+                        <div class="metric-value">0.283</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">MAPK</div>
+                        <div class="metric-value">0.330</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">MYC</div>
+                        <div class="metric-value">0.278</div>
+                    </div>
+
+                </div>
+
+                <div class="key-findings">
+                    <h4>Dormancy Signature Results</h4>
+                    <ul>
+                        <li>Dormant Cells: 0.1%</li>
+                        <li>Transitional Cells: 0.0%</li>
+                        <li>Proliferative Cells: 0.0%</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h4>Top 5 FDA-Approved Drug Recommendations</h4>
+                    <table>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Mechanism</th>
+                            <th>Score</th>
+                        </tr>
+
+                        <tr>
+                            <td>Linsitinib (OSI-906)</td>
+                            <td>Selective IGF1R tyrosine kinase inhibitor</td>
+                            <td>8.27</td>
+                        </tr>
+
+                        <tr>
+                            <td>BMS-536924</td>
+                            <td>IGF1R tyrosine kinase inhibitor</td>
+                            <td>8.27</td>
+                        </tr>
+
+                        <tr>
+                            <td>AZD8055</td>
+                            <td>ATP-competitive mTOR kinase inhibitor</td>
+                            <td>8.27</td>
+                        </tr>
+
+                        <tr>
+                            <td>BEZ235</td>
+                            <td>Dual PI3K/mTOR inhibitor</td>
+                            <td>8.27</td>
+                        </tr>
+
+                        <tr>
+                            <td>Temsirolimus (Torisel)</td>
+                            <td>mTORC1 inhibitor</td>
+                            <td>6.76</td>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="figure-gallery">
+
+                    <div class="figure-item">
+                        <img src="lung_cancer/figures/lung_cancer_dormancy_distribution.png" alt="lung cancer dormancy distribution" class="figure-image">
+                        <div class="figure-caption">lung cancer dormancy distribution</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="lung_cancer/figures/lung_cancer_igf_expression_heatmap.png" alt="lung cancer igf expression heatmap" class="figure-image">
+                        <div class="figure-caption">lung cancer igf expression heatmap</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="lung_cancer/figures/lung_cancer_pathway_activation_distribution.png" alt="lung cancer pathway activation distribution" class="figure-image">
+                        <div class="figure-caption">lung cancer pathway activation distribution</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="lung_cancer/figures/lung_cancer_top_drugs.png" alt="lung cancer top drugs" class="figure-image">
+                        <div class="figure-caption">lung cancer top drugs</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="lung_cancer/figures/lung_cancer_window_of_risk.png" alt="lung cancer window of risk" class="figure-image">
+                        <div class="figure-caption">lung cancer window of risk</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cancer-analysis">
+                <div class="cancer-title">[Prostate Cancer]</div>
+
+                <div class="metrics-grid">
+
+                    <div class="metric-card">
+                        <div class="metric-label">IGF Ligand</div>
+                        <div class="metric-value">0.201</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">IGF Receptor</div>
+                        <div class="metric-value">0.177</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">PI3K-AKT</div>
+                        <div class="metric-value">0.330</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">mTOR</div>
+                        <div class="metric-value">0.291</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">MAPK</div>
+                        <div class="metric-value">0.266</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">MYC</div>
+                        <div class="metric-value">0.299</div>
+                    </div>
+
+                </div>
+
+                <div class="key-findings">
+                    <h4>Dormancy Signature Results</h4>
+                    <ul>
+                        <li>Dormant Cells: 0.0%</li>
+                        <li>Transitional Cells: 11.0%</li>
+                        <li>Proliferative Cells: 0.1%</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h4>Top 5 FDA-Approved Drug Recommendations</h4>
+                    <table>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Mechanism</th>
+                            <th>Score</th>
+                        </tr>
+
+                        <tr>
+                            <td>Linsitinib (OSI-906)</td>
+                            <td>Selective IGF1R tyrosine kinase inhibitor</td>
+                            <td>8.73</td>
+                        </tr>
+
+                        <tr>
+                            <td>BMS-536924</td>
+                            <td>IGF1R tyrosine kinase inhibitor</td>
+                            <td>8.73</td>
+                        </tr>
+
+                        <tr>
+                            <td>Darolutamide (Nubeqa)</td>
+                            <td>Next-generation androgen receptor antagonist</td>
+                            <td>7.91</td>
+                        </tr>
+
+                        <tr>
+                            <td>Enzalutamide (Xtandi)</td>
+                            <td>Next-generation androgen receptor antagonist</td>
+                            <td>7.91</td>
+                        </tr>
+
+                        <tr>
+                            <td>Abiraterone (Zytiga)</td>
+                            <td>CYP17A1 inhibitor</td>
+                            <td>6.91</td>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="figure-gallery">
+
+                    <div class="figure-item">
+                        <img src="prostate_cancer/figures/prostate_cancer_dormancy_distribution.png" alt="prostate cancer dormancy distribution" class="figure-image">
+                        <div class="figure-caption">prostate cancer dormancy distribution</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="prostate_cancer/figures/prostate_cancer_igf_expression_heatmap.png" alt="prostate cancer igf expression heatmap" class="figure-image">
+                        <div class="figure-caption">prostate cancer igf expression heatmap</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="prostate_cancer/figures/prostate_cancer_pathway_activation_distribution.png" alt="prostate cancer pathway activation distribution" class="figure-image">
+                        <div class="figure-caption">prostate cancer pathway activation distribution</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="prostate_cancer/figures/prostate_cancer_top_drugs.png" alt="prostate cancer top drugs" class="figure-image">
+                        <div class="figure-caption">prostate cancer top drugs</div>
+                    </div>
+
+                    <div class="figure-item">
+                        <img src="prostate_cancer/figures/prostate_cancer_window_of_risk.png" alt="prostate cancer window of risk" class="figure-image">
+                        <div class="figure-caption">prostate cancer window of risk</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">COMPARATIVE ANALYSIS</h2>
+            <div class="comparative-section">
+                <h3>Cross-Cancer Comparison</h3>
+                <p>Professional visualizations comparing IGF pathway activation, dormancy signatures, 
+                and clinical outcomes across the three cancer types.</p>
+            </div>
+            
+            <div class="figure-gallery">
+                <div class="figure-item">
+                    <img src="04_COMPARATIVE_ANALYSIS/IGF_Pathway_Comparison_Heatmap.png" 
+                         alt="IGF Pathway Comparison" class="figure-image">
+                    <div class="figure-caption">IGF Pathway Component Comparison</div>
+                </div>
+                <div class="figure-item">
+                    <img src="04_COMPARATIVE_ANALYSIS/IGF_Activation_Comparison.png" 
+                         alt="IGF Activation" class="figure-image">
+                    <div class="figure-caption">Overall IGF Pathway Activation</div>
+                </div>
+                <div class="figure-item">
+                    <img src="04_COMPARATIVE_ANALYSIS/Dormancy_Signature_Comparison.png" 
+                         alt="Dormancy Comparison" class="figure-image">
+                    <div class="figure-caption">Cell Population Composition</div>
+                </div>
+                <div class="figure-item">
+                    <img src="04_COMPARATIVE_ANALYSIS/IGF_Dormancy_Correlation.png" 
+                         alt="IGF-Dormancy Correlation" class="figure-image">
+                    <div class="figure-caption">IGF-Dormancy Relationship</div>
+                </div>
+                <div class="figure-item">
+                    <img src="04_COMPARATIVE_ANALYSIS/Summary_Statistics_Table.png" 
+                         alt="Summary Statistics" class="figure-image">
+                    <div class="figure-caption">Summary Statistics Table</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">CLINICAL IMPLICATIONS</h2>
+            <div class="key-findings">
+                <h4>Key Discovery</h4>
+                <p>Each cancer type demonstrates distinct IGF pathway activation correlating with 
+                dormancy signatures and specific FDA-approved drug responses. This supports precision 
+                medicine approaches using cancer-type and IGF-state specific combinations.</p>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Professional multi-cancer analysis using advanced bioinformatics pipelines incorporating 
+            IGF pathway analysis, clinical risk modeling, and precision drug repurposing.</p>
+        </footer>
+    </div>
+</body>
+</html>
