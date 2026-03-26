@@ -7,9 +7,9 @@ and FDA-approved drug repurposing (IGF-pathway focus)
 import torch
 import pandas as pd
 import numpy as np
-from Bio import SeqIO
 
 from data_preprocess import preprocess_scRNA, extract_igf_expression
+from snrna_features import load_snRNA_features, tile_snRNA_features, combine_features
 from graph_model import GraphCommLite
 from train_predict import train_graph_model, drug_response_prediction
 from pathway_analysis import build_igf_graph
@@ -22,24 +22,18 @@ from visualize import plot_igf_activity, plot_dormancy_heatmap, plot_communicati
 # ============================================================
 
 #  👇 Replace this path with your downloaded LUAD file
-sc_path = "data/scRNA_data.csv"
+import os
+# Allow overriding the single-cell CSV path via environment variable for one-off runs
+sc_path = os.environ.get('SC_PATH', "data/scRNA_LUNG_T01_full.csv")
 features_np, A_knn, G_knn = preprocess_scRNA(sc_path)
 
 # ============================================================
 # 2️⃣  Load the U1 snRNA (RNU1-1) sequence and encode it
 # ============================================================
 
-def load_snRNA_features(fasta_path="data/snRNA_U1.fa"):
-    record = next(SeqIO.parse(fasta_path, "fasta"))
-    seq = str(record.seq).upper()
-    # simple base-frequency encoding
-    vec = np.array([seq.count(b) for b in ["A", "C", "G", "T"]], dtype=float)
-    vec = vec / vec.sum()
-    return vec
-
 snrna_vec = load_snRNA_features()
-snrna_tiled = np.tile(snrna_vec, (features_np.shape[0], 1))
-features_combined = np.hstack([features_np, snrna_tiled])
+snrna_tiled = tile_snRNA_features(snrna_vec, n_cells=features_np.shape[0])
+features_combined = combine_features(features_np, snrna_tiled)
 
 # ============================================================
 # 3️⃣  Build IGF-pathway communication graph

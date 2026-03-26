@@ -1,11 +1,62 @@
+# Python
 __pycache__/
-.venv/
-*.pyc
-data/*.csv
-data/*.fa
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
 *.egg-info/
-env/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
 venv/
+ENV/
+env/
+.env
+
+# IDE
 .vscode/
-/.DS_Store
-*.ipynb_checkpoints
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data & Results (large files)
+data/
+plots/
+results/
+*.csv
+*.xlsx
+*.h5
+*.pkl
+*.joblib
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Project specific
+.venv
+.git

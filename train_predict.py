@@ -25,7 +25,27 @@ def train_graph_model(features, adj, labels, epochs=50):
     return model
 
 def drug_response_prediction(cell_embeddings, drug_labels):
-    rf = RandomForestClassifier(n_estimators=100, random_state=42)
+    """Train Random Forest on cell embeddings.
+    
+    Validates that labels have variance and that predictions are meaningful.
+    """
+    # Check label distribution
+    unique_labels = np.unique(drug_labels)
+    if len(unique_labels) < 2:
+        print("⚠️ WARNING: Drug labels are not binary! All cells belong to single class.")
+        print(f"   Unique labels: {unique_labels}")
+        print("   This will result in trivial predictions (all 0 or all 1).")
+    
+    rf = RandomForestClassifier(n_estimators=100, random_state=42, min_samples_split=2, min_samples_leaf=1)
     rf.fit(cell_embeddings, drug_labels)
-    print("Random Forest trained on cell embeddings for drug prediction.")
+    
+    # Check predictions for variance
+    train_preds = rf.predict(cell_embeddings)
+    unique_preds = np.unique(train_preds)
+    if len(unique_preds) < 2:
+        print("⚠️ WARNING: Random Forest is predicting only one class!")
+        print(f"   All predictions are: {unique_preds[0]}")
+        print("   This suggests label imbalance or insufficient signal in embeddings.")
+    
+    print("✅ Random Forest trained on cell embeddings for drug prediction.")
     return rf
